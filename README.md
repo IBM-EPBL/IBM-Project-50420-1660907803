@@ -23,4 +23,6 @@ To develop an end-to-end web application capable of displaying the current job o
 
 
 Technical Architecture:
+
+
 ![image](https://user-images.githubusercontent.com/68808089/189526961-b596e79f-ae47-4856-a869-4d07dc72651b.png)
