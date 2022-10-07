@@ -1,4 +1,17 @@
 # IBM-Project-50420-1660907803
+
+Team ID : PNT2022TMID24872
+
+Team Size : 4
+
+Team Leader : KARTHIK P
+
+Team member : JASPER KIRUBAKARAN J
+
+Team member : NANDAKUMAR R
+
+Team member : ASWIN KUMAR P
+
 Skill / Job Recommender Application
 Having lots of skills but wondering which job will best suit you? Don’t need to worry! We have come up with a skill recommender solution through which the fresher or the skilled person can log in and find the jobs by using the search option or they can directly interact with the chatbot and get their dream job.
 
