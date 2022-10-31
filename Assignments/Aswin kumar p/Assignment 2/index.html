@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <title>Sample Form</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Sample Form</h1>
+    <form onsubmit="return AddData()">
+        <span>Email</span>
+        <input type="email" placeholder="Enter your Email" id="email" required>
+        <span>Password</span>
+        <input type="password" placeholder="Enter your Password" id="password" required>
+        <span>Age</span>
+        <input type="number" placeholder="Enter Age" id="age" required>
+        <span>State</span>
+        <input type="text" placeholder="Enter State" id="state" required>
+        <p>
+            <span>Select your Favourite Web Language</span><br>
+            <input type="radio" id="favlanguage" value="HTML">
+            <label for="html">HTML</label>
+            <input type="radio" id="favlanguage" value="CSS">
+            <label for="css">CSS</label>
+            <input type="radio" id="favlanguage" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+        </p>
+        <span>Choose a backend language:</span>
+        <select name="backend" id="backend">
+            <option value="flask">Flask</option>
+            <option value="django">Django</option>
+            <option value="java">Java</option>
+            <option value="nodejs">NodeJS</option>
+        </select>
+        <span>Message:</span>
+        <textarea id="message" id="message" rows="4" cols="50"></textarea><br>
+        <button type="submit" formaction="./Success.html">Submit</button>
+    </form>
+    <h1 style="text-align: center;">Form Data</h1>
+    <div id="tab" style="margin-left: 350px;">
+        
+        <table id="list" cellspacing="3" cellpadding="10" border="1">
+            <thead>
+                <tr>
+                    <td>Email</td>
+                    <td>Password</td>
+                    <td>Age</td>
+                    <td>State</td>
+                    <td>Web Language</td>
+                    <td>Backend</td>
+                    <td>Message</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        function AddData() {
+            alert("Form Submitted Successfully.")
+            var rows = "";
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var age = document.getElementById("age").value;
+            var state = document.getElementById("state").value;
+            var weblanguage = document.getElementById("favlanguage").value;
+            var backend = document.getElementById("backend").value;
+            var message = document.getElementById("message").value;
+            rows += "<tr><td>" + email + "</td><td>" + password + "</td><td>" + age + "</td><td> " + state + "</td><td> " + weblanguage + "</td><td> " + backend + "</td><td> " + message +  "</td></tr> ";
+            $(rows).appendTo("#list tbody");
+            return false;
+        }
+    </script>
+</body>
+
+</html>
